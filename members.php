@@ -12,11 +12,12 @@
     if ($view == $user) $name = "Your";
     else                $name = "$view's";
     
-    echo "<h3>$name Profile</h3>";
+    echo "<h3>$name Profile</h3><br>";
     showProfile($view);
-    echo "<a class='button' href='messages.php?view=$view'>" .
+    echo "<a class='btn' href='messages.php?view=$view'>" .
          "View $name messages</a><br><br>";
-    die("</div></body></html>");
+    die("</div><script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script></body></html>");
   }
 
   if (isset($_GET['add']))
@@ -65,5 +66,9 @@
 ?>
 
     </ul></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </body>
 </html>

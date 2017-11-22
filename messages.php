@@ -35,9 +35,9 @@
       <form method='post' action='messages.php?view=$view'>
       Type here to leave a message:<br>
       <textarea name='text' cols='40' rows='3'></textarea><br>
-      Public<input type='radio' name='pm' value='0' checked='checked'>
-      Private<input type='radio' name='pm' value='1'>
-      <input type='submit' value='Post Message'></form><br>
+      Public <input type='radio' name='pm' value='0' checked='checked'>
+      Private <input type='radio' name='pm' value='1'>
+      <input type='submit' value='Post Message' style="margin-left:1em;" class="btn"></form><br>
 _END;
 
     if (isset($_GET['erase']))
@@ -65,20 +65,25 @@ _END;
           echo "whispered: <span class='whisper'>&quot;" .
             $row['message']. "&quot;</span> ";
 
-        if ($row['recip'] == $user)
+        if ($row['recip'] == $user){
           echo "[<a href='messages.php?view=$view" .
                "&erase=" . $row['id'] . "'>erase</a>]";
+        }
 
-        echo "<br>";
+        echo "<br><br>";
       }
     }
   }
 
   if (!$num) echo "<br><span class='info'>No messages yet</span><br><br>";
 
-  echo "<br><a class='button' href='messages.php?view=$view'>Refresh messages</a>";
+  echo "<a class='btn' href='messages.php?view=$view'>Refresh messages</a>";
 ?>
 
     </div><br>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </body>
 </html>

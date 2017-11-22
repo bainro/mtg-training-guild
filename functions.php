@@ -1,8 +1,8 @@
 <?php //functions.php
   $dbhost  = 'localhost';    
   $dbname  = 'robinsnest';   
-  $dbuser  = '';   
-  $dbpass  = '';   
+  $dbuser  = 'rob';   
+  $dbpass  = 'Pink3rose';   
   $appname = "MTG Training Guild"; 
 
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
@@ -44,7 +44,7 @@
   function showProfile($user)
   {
     if (file_exists("profilePix/$user.jpg"))
-      echo "<img src='profilePix/$user.jpg' style='float:left;'>";
+      echo "<img src='profilePix/$user.jpg' style='float:left;' class='img-circle'>";
 
     $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
 

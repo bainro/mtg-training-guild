@@ -1,47 +1,68 @@
 /* styles.css */
 
-* {
+*{
   font-family:verdana,sans-serif;
   font-size  :14pt;
   max-width: 100%;
 }
 
-body {
-  max-width: 100%;
-  width: 750px;
-  margin    :20px auto;
-  background:grey;
-  border    :2px solid black;
+html{
+  background-color: black;
 }
 
-html {
-  background: black
+body{
+  max-width         :100%;
+  margin            :0 auto;
+  background-color  :#ffdede;
+  border            :2px solid black;
+  min-height        :100vh;
+  border-radius     :10px;
 }
 
-img {
-  border            :1px solid black;
-  margin-right      :15px;
-  -moz-box-shadow   :2px 2px 2px #888;
-  -webkit-box-shadow:2px 2px 2px #888;
-  box-shadow        :2px 2px 2px #888;
+img{
+  border              :1px solid black;
+  margin-right        :15px;
+  -moz-box-shadow     :2px 2px 2px #888;
+  -webkit-box-shadow  :2px 2px 2px #888;
+  box-shadow          :2px 2px 2px #888;
 }
 
-li a, .button {
+hr{
+  color: black;
+  border-color: black;
+  background-color: black;
+}
+
+li a{
   text-decoration:none;
 }
 
-li a:hover, .button:hover {
+li a:hover{
   color:green;
 }
- 
-.appname {
-  text-align :center;
-  border-top : 2px solid black;
-  border-bottom: 2px solid black;
-  color      :blue;
-  font-family:helvetica;
-  font-size  :20pt;
-  padding    :4px;
+
+input{
+  margin-bottom: 1em;
+}
+
+textarea{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.btn{
+  color: blue;
+  background-color: white;
+  border-radius     :5px;
+  -moz-box-shadow   :2px 2px 2px #888;
+  -webkit-box-shadow:2px 2px 2px #888;
+  box-shadow        :2px 2px 2px #888;
+  transition: background-color .6s; 
+}
+
+.btn:hover{
+  color: white;
+  background-color: blue;
 }
 
 .fieldname {
@@ -50,7 +71,7 @@ li a:hover, .button:hover {
 }
 
 .main {
-  margin-left:40px;
+  text-align: justify;
 }
 
 .info {
@@ -61,7 +82,11 @@ li a:hover, .button:hover {
   margin-left:40px;
 }
 
-.menu li, .button {
+.menu{
+  max-width: 100%;
+}
+
+.menu li{
   display           :inline;
   padding           :4px 6px;
   border            :1px solid #777;
@@ -72,6 +97,10 @@ li a:hover, .button:hover {
 	-moz-box-shadow   :2px 2px 2px #888;
 	-webkit-box-shadow:2px 2px 2px #888;
 	box-shadow        :2px 2px 2px #888;
+}
+
+.navbar>.container .navbar-brand{
+  margin-left: 0;
 }
 
 .subhead {
